@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graph_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GraphFragment">
+
+    <!--<ProgressBar
+        android:id="@+id/graph_progress"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/blue"/>-->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/graph_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:spinnerMode="dialog"
+            android:tooltipText="Choose Country" />
+
+        <ImageView
+            android:id="@+id/flag_holderGraph"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:elevation="5dp"
+            android:padding="10dp" />
+    </androidx.cardview.widget.CardView><!--Spinner-->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/duration_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cardSpinner"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="-7dp"
+        app:cardCornerRadius="5dp">
+
+        <com.robinhood.ticker.TickerView
+            android:id="@+id/graph_duration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/product_sans_bold"
+            android:gravity="end"
+            android:paddingEnd="10dp"
+            android:paddingBottom="5dp"
+            android:text="Data Duration: "
+            android:textSize="12sp"
+            app:ticker_animationDuration="1500"
+            app:ticker_defaultPreferredScrollingDirection="any" />
+    </androidx.cardview.widget.CardView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/graph2_anim"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/graph_loading" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardgraph1"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@id/duration_container"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/blue_alpha">
+
+            <RelativeLayout
+                android:id="@+id/rl1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/v1"
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:background="@drawable/l2" />
+
+                <TextView
+                    android:id="@+id/graph_title1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:fontFamily="@font/product_sans_regular"
+                    android:gravity="left|center"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:text=""
+                    android:textColor="@color/blue"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/graph_icon1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="15dp"
+                    android:src="@drawable/total" />
+            </RelativeLayout>
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/linechart1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/rl1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/border_blue" />
+
+            <!--  <com.airbnb.lottie.LottieAnimationView
+                  android:id="@+id/graph1_anim"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  app:lottie_rawRes="@raw/covid_loading"
+                  android:layout_marginTop="20dp"
+                  android:layout_centerInParent="true"
+                  app:lottie_autoPlay="true"
+                  app:lottie_loop="true"/>-->
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView><!--Graph 1-->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardgraph2"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@id/cardgraph1"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/green_alpha">
+
+            <RelativeLayout
+                android:id="@+id/rl2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/v2"
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:background="@drawable/l3" />
+
+                <TextView
+                    android:id="@+id/graph_title2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:fontFamily="@font/product_sans_regular"
+                    android:gravity="left|center"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:text=""
+                    android:textColor="@color/green"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/graph_icon2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="12.5dp"
+                    android:src="@drawable/recovered" />
+            </RelativeLayout>
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/linechart2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/rl2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/border_green" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView><!--Graph 2-->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardgraph3"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@id/cardgraph2"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:visibility="invisible"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/red_alpha">
+
+            <RelativeLayout
+                android:id="@+id/rl3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/v3"
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:background="@drawable/l4" />
+
+                <TextView
+                    android:id="@+id/graph_title3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:fontFamily="@font/product_sans_regular"
+                    android:gravity="left|center"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:text=""
+                    android:textColor="@color/red"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/graph_icon3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="12.5dp"
+                    android:src="@drawable/died" />
+            </RelativeLayout>
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/linechart3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/rl3"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/border_red" />
+
+            <!--<com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/graph3_anim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:lottie_rawRes="@raw/covid_loading"
+                android:layout_marginTop="20dp"
+                android:layout_centerInParent="true"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"/>-->
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView><!--Graph 3-->
+</RelativeLayout>

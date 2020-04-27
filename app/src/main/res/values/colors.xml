@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#323232</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="red">#DB4437</color>
+    <color name="red_alpha">#1ADB4437</color>
+    <color name="red_marker_bg">#33DB4437</color>
+
+    <color name="green">#0F9D58</color>
+    <color name="green_alpha">#1A69F1AF</color>
+    <color name="green_marker_bg">#330F9D58</color>
+
+    <color name="blue">#4285F4</color>
+    <color name="blue_alpha">#1A4285F4</color>
+    <color name="blue_marker_bg">#334285F4</color>
+
+    <color name="yellow">#F4B400</color>
+    <color name="yellow_alpha">#1AF4B400</color>
+    <color name="yellow_marker_bg">#33F4B400</color>
+
+    <color name="default_text">#808080</color>
+    <color name="default_text_graph">#EEFF41</color>
+
+    <color name="showmore">#FF4081</color>
+</resources>

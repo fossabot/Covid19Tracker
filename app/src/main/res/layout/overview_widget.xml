@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/widget_holder_bg">
+
+    <ImageView
+        android:id="@+id/widget_flag_holder"
+        android:layout_width="65dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/india_flag" />
+
+    <TextView
+        android:id="@+id/widget_country_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toEndOf="@+id/widget_flag_holder"
+        android:fontFamily="@font/product_sans_bold"
+        android:text="INDIA"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/widget_timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/widget_data_grid"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_toEndOf="@+id/widget_country_name"
+        android:fontFamily="@font/product_sans_regular"
+        android:text="Last Updated: 00/00/00"
+        android:textSize="15sp" />
+
+    <GridLayout
+        android:id="@+id/widget_data_grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/widget_flag_holder"
+        android:columnCount="2"
+        android:padding="10dp"
+        android:rowCount="2">
+
+        <TextView
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/widget_bg_yellow"
+            android:fontFamily="@font/product_sans_bold"
+            android:padding="7dp"
+            android:text="Country"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/widget_bg_blue"
+            android:fontFamily="@font/product_sans_bold"
+            android:padding="7dp"
+            android:text="Total"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/widget_bg_green"
+            android:fontFamily="@font/product_sans_bold"
+            android:padding="7dp"
+            android:text="Recovered"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/widget_bg_red"
+            android:fontFamily="@font/product_sans_bold"
+            android:padding="7dp"
+            android:text="Deaths"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+    </GridLayout>
+</RelativeLayout>
+
+    <!--<androidx.cardview.widget.CardView
+        android:layout_width="185dp"
+        android:layout_height="150dp"
+        android:layout_columnWeight="50"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@drawable/l3"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="175dp"
+        android:layout_height="150dp"
+        android:layout_columnWeight="50"
+        android:layout_marginTop="10dp">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@drawable/l4"/>
+    </androidx.cardview.widget.CardView>-->

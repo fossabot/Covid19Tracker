@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TextFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/text_cardView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/selectCountryField"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbarStyle="insideOverlay"
+            android:spinnerMode="dialog"
+            android:tooltipText="Choose Country" />
+
+        <ImageView
+            android:id="@+id/flag_holder"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:padding="10dp" />
+    </androidx.cardview.widget.CardView>  <!-- For Spinner-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/update_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_cardView"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="-7dp"
+        app:cardCornerRadius="5dp">
+
+        <com.robinhood.ticker.TickerView
+            android:id="@+id/last_updated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/product_sans_bold"
+            android:gravity="end"
+            android:paddingEnd="10dp"
+            android:paddingBottom="5dp"
+            android:text="Last Updated:"
+            android:textSize="12sp"
+            app:ticker_animationDuration="1500"
+            app:ticker_defaultPreferredScrollingDirection="any" />
+    </androidx.cardview.widget.CardView> <!--For last update-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/update_container">
+
+        <LinearLayout
+            android:id="@+id/parentLinear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--1st Linear Layout START-->
+            <LinearLayout
+                android:id="@+id/childlinear1"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="50"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="2dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="@drawable/l4" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/cardtitle1"
+                            android:layout_width="match_parent"
+                            android:layout_height="65dp"
+                            android:background="@color/red_alpha"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:weightSum="100">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="20"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:src="@drawable/country" />
+
+                            <TextView
+                                android:id="@+id/countryFieldTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="80"
+                                android:fontFamily="@font/product_sans_bold"
+                                android:gravity="center"
+                                android:text="Country"
+                                android:textColor="@color/red"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+
+                        <com.robinhood.ticker.TickerView
+                            android:id="@+id/countryField"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/cardtitle1"
+                            android:gravity="center"
+                            android:text="---"
+                            android:textColor="@color/red"
+                            android:textSize="25sp"
+                            app:ticker_animationDuration="1500"
+                            app:ticker_defaultPreferredScrollingDirection="any" />
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>  <!--Card1 r1c1-->
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="50"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="2dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="@drawable/l1" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/cardtitle2"
+                            android:layout_width="match_parent"
+                            android:layout_height="65dp"
+                            android:background="@color/yellow_alpha"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:weightSum="100">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="20"
+                                android:gravity="center"
+                                android:padding="7dp"
+                                android:src="@drawable/total" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="80"
+                                android:fontFamily="@font/product_sans_bold"
+                                android:gravity="center"
+                                android:text="Total"
+                                android:textColor="@color/yellow"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+
+                        <com.robinhood.ticker.TickerView
+                            android:id="@+id/totalCasesField"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/cardtitle2"
+                            android:gravity="center"
+                            android:text="---"
+                            android:textColor="@color/yellow"
+                            android:textSize="25sp"
+                            app:ticker_animationDuration="1500"
+                            app:ticker_defaultPreferredScrollingDirection="any" />
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>  <!--Card2 r1c2-->
+
+            </LinearLayout>
+            <!--1st Linear Layout END-->
+
+            <!--2st Linear Layout START-->
+            <LinearLayout
+                android:id="@+id/childlinear2"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="50"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="2dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="@drawable/l2" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/cardtitle3"
+                            android:layout_width="match_parent"
+                            android:layout_height="65dp"
+                            android:background="@color/blue_alpha"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="10dp"
+                            android:weightSum="100">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="20"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:src="@drawable/active" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="80"
+                                android:fontFamily="@font/product_sans_bold"
+                                android:gravity="center"
+                                android:text="Active"
+                                android:textColor="@color/blue"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+
+                        <com.robinhood.ticker.TickerView
+                            android:id="@+id/activeField"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/cardtitle3"
+                            android:layout_marginTop="0dp"
+                            android:gravity="center"
+                            android:text="---"
+                            android:textColor="@color/blue"
+                            android:textSize="25sp"
+                            app:ticker_animationDuration="1500"
+                            app:ticker_defaultPreferredScrollingDirection="any" />
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>  <!--Card3 r2c1-->
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="50"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="2dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="@drawable/l3" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/cardtitle4"
+                            android:layout_width="match_parent"
+                            android:layout_height="65dp"
+                            android:background="@color/blue_alpha"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:weightSum="100">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="20"
+                                android:gravity="center"
+                                android:padding="2dp"
+                                android:src="@drawable/recovered" />
+
+                            <TextView
+                                android:id="@+id/totalFieldTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="80"
+                                android:fontFamily="@font/product_sans_bold"
+                                android:gravity="left"
+                                android:text="Recovered"
+                                android:textColor="@color/green"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+
+                        <com.robinhood.ticker.TickerView
+                            android:id="@+id/recoveredField"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/cardtitle4"
+                            android:gravity="center"
+                            android:text="---"
+                            android:textColor="@color/green"
+                            android:textSize="25sp"
+                            app:ticker_animationDuration="1500"
+                            app:ticker_defaultPreferredScrollingDirection="any" />
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>  <!--Card4 r2c2-->
+
+            </LinearLayout>
+            <!--2st Linear Layout END-->
+
+            <!--3st Linear Layout START-->
+            <LinearLayout
+                android:id="@+id/childlinear3"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="50"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="2dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="@drawable/l4" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/cardtitle5"
+                            android:layout_width="match_parent"
+                            android:layout_height="65dp"
+                            android:background="@color/red_alpha"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:weightSum="100">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="20"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:src="@drawable/died" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="80"
+                                android:fontFamily="@font/product_sans_bold"
+                                android:gravity="center"
+                                android:text="Dead"
+                                android:textColor="@color/red"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+
+                        <com.robinhood.ticker.TickerView
+                            android:id="@+id/deadField"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/cardtitle5"
+                            android:gravity="center"
+                            android:text="---"
+                            android:textColor="@color/red"
+                            android:textSize="25sp"
+                            app:ticker_animationDuration="1500"
+                            app:ticker_defaultPreferredScrollingDirection="any" />
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>  <!--Card5 r3c1-->
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="50"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="2dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="@drawable/l1" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/cardtitle6"
+                            android:layout_width="match_parent"
+                            android:layout_height="65dp"
+                            android:background="@color/yellow_alpha"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:weightSum="100">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="20"
+                                android:gravity="center"
+                                android:src="@drawable/todaycases" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="80"
+                                android:fontFamily="@font/product_sans_bold"
+                                android:gravity="center"
+                                android:text="Cases ↑ "
+                                android:textColor="@color/yellow"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+
+                        <com.robinhood.ticker.TickerView
+                            android:id="@+id/todayCasesField"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/cardtitle6"
+                            android:gravity="center"
+                            android:text="---"
+                            android:textColor="@color/yellow"
+                            android:textSize="25sp"
+                            app:ticker_animationDuration="1500"
+                            app:ticker_defaultPreferredScrollingDirection="any" />
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>  <!--Card2 r1c2-->
+
+            </LinearLayout>
+            <!--3st Linear Layout END-->
+
+            <!--4st Linear Layout START-->
+            <LinearLayout
+                android:id="@+id/childlinear4"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="50"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="2dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="@drawable/l2" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/cardtitle7"
+                            android:layout_width="match_parent"
+                            android:layout_height="65dp"
+                            android:background="@color/blue_alpha"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="10dp"
+                            android:weightSum="100">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="20"
+                                android:gravity="center"
+                                android:padding="0dp"
+                                android:src="@drawable/todaydeaths" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="80"
+                                android:fontFamily="@font/product_sans_bold"
+                                android:gravity="center"
+                                android:text="Deaths ↑"
+                                android:textColor="@color/blue"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+
+                        <com.robinhood.ticker.TickerView
+                            android:id="@+id/todayDeadField"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/cardtitle7"
+                            android:layout_marginTop="0dp"
+                            android:gravity="center"
+                            android:text="---"
+                            android:textColor="@color/blue"
+                            android:textSize="25sp"
+                            app:ticker_animationDuration="1500"
+                            app:ticker_defaultPreferredScrollingDirection="any" />
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>  <!--Card7 r1c1-->
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="50"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="2dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="@drawable/l3" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/cardtitle8"
+                            android:layout_width="match_parent"
+                            android:layout_height="65dp"
+                            android:background="@color/blue_alpha"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:weightSum="100">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="20"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:src="@drawable/critical" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="80"
+                                android:fontFamily="@font/product_sans_bold"
+                                android:gravity="center"
+                                android:text="Critical"
+                                android:textColor="@color/green"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+
+                        <com.robinhood.ticker.TickerView
+                            android:id="@+id/criticalField"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/cardtitle8"
+                            android:gravity="center"
+                            android:text="---"
+                            android:textColor="@color/green"
+                            android:textSize="25sp"
+                            app:ticker_animationDuration="1500"
+                            app:ticker_defaultPreferredScrollingDirection="any" />
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>  <!--Card4 r1c2-->
+
+            </LinearLayout>
+            <!--4st Linear Layout END-->
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

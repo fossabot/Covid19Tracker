@@ -1,0 +1,62 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId 'com.example.covid19tracker'
+        minSdkVersion 26
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+repositories {
+    maven { url 'https://jitpack.io' }//for Bar Graph
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    /*for chip nvaigation bar(BottomBar)*/
+    implementation 'com.ismaeldivita.chipnavigation:chip-navigation-bar:1.3.0'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.3.61'
+    /*END*/
+
+    implementation 'com.google.android.material:material:1.1.0'//for cardview
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0'//Swipe Refresh Layout
+    implementation 'com.sdsmdg.tastytoast:tastytoast:0.1.1'//For animated Toast
+    implementation 'com.airbnb.android:lottie:3.4.0'//Lottie Animations
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    implementation 'com.robinhood.ticker:ticker:2.0.2'//Scrolling ticker text view
+
+    implementation 'com.google.code.gson:gson:2.8.6'//for json
+
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.11.0.rc1'//JAVA-JSON Data Binding
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'//For mp chart
+
+    implementation 'com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1'//for searchable spinner API:
+
+
+}

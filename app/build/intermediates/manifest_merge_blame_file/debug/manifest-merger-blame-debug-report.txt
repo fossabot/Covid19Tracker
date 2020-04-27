@@ -1,0 +1,99 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.covid19tracker"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+8-->D:\AndroidWorkspace\Covid19_Tracker\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->D:\AndroidWorkspace\Covid19_Tracker\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->D:\AndroidWorkspace\Covid19_Tracker\app\src\main\AndroidManifest.xml:5:5-67
+11-->D:\AndroidWorkspace\Covid19_Tracker\app\src\main\AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->D:\AndroidWorkspace\Covid19_Tracker\app\src\main\AndroidManifest.xml:6:5-79
+12-->D:\AndroidWorkspace\Covid19_Tracker\app\src\main\AndroidManifest.xml:6:22-76
+13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+13-->D:\AndroidWorkspace\Covid19_Tracker\app\src\main\AndroidManifest.xml:7:5-76
+13-->D:\AndroidWorkspace\Covid19_Tracker\app\src\main\AndroidManifest.xml:7:22-73
+14
+15    <application
+15-->D:\AndroidWorkspace\Covid19_Tracker\app\src\main\AndroidManifest.xml:9:5-44:19
+16        android:name="com.example.covid19tracker.LocaleManager"
+16-->D:\AndroidWorkspace\Covid19_Tracker\app\src\main\AndroidManifest.xml:10:9-38
+17        android:allowBackup="true"
+17-->D:\AndroidWorkspace\Covid19_Tracker\app\src\main\AndroidManifest.xml:11:9-35
+18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+18-->[androidx.core:core:1.1.0] D:\.gradle\caches\transforms-2\files-2.1\34b4ab0d8b65ac74ddd00d45b26dd963\core-1.1.0\AndroidManifest.xml:24:18-86
+19        android:debuggable="true"
+20        android:extractNativeLibs="false"
+21        android:icon="@mipmap/covid_logo_foreground"
+21-->D:\AndroidWorkspace\Covid19_Tracker\app\src\main\AndroidManifest.xml:12:9-53
+22        android:label="@string/app_name"
+22-->D:\AndroidWorkspace\Covid19_Tracker\app\src\main\AndroidManifest.xml:13:9-41
+23        android:roundIcon="@mipmap/covid_logo_round"
+23-->D:\AndroidWorkspace\Covid19_Tracker\app\src\main\AndroidManifest.xml:14:9-53
+24        android:supportsRtl="true"
+24-->D:\AndroidWorkspace\Covid19_Tracker\app\src\main\AndroidManifest.xml:15:9-35
+25        android:testOnly="true"
+26        android:theme="@style/AppTheme" >
+26-->D:\AndroidWorkspace\Covid19_Tracker\app\src\main\AndroidManifest.xml:16:9-40
+27        <receiver android:name="com.example.covid19tracker.OverviewWidget" >
+27-->D:\AndroidWorkspace\Covid19_Tracker\app\src\main\AndroidManifest.xml:17:9-25:20
+27-->D:\AndroidWorkspace\Covid19_Tracker\app\src\main\AndroidManifest.xml:17:19-75
+28            <intent-filter>
+28-->D:\AndroidWorkspace\Covid19_Tracker\app\src\main\AndroidManifest.xml:18:13-20:29
+29                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+29-->D:\AndroidWorkspace\Covid19_Tracker\app\src\main\AndroidManifest.xml:19:17-84
+29-->D:\AndroidWorkspace\Covid19_Tracker\app\src\main\AndroidManifest.xml:19:25-81
+30            </intent-filter>
+31
+32            <meta-data
+32-->D:\AndroidWorkspace\Covid19_Tracker\app\src\main\AndroidManifest.xml:22:13-24:64
+33                android:name="android.appwidget.provider"
+33-->D:\AndroidWorkspace\Covid19_Tracker\app\src\main\AndroidManifest.xml:23:17-58
+34                android:resource="@xml/overview_widget_info" />
+34-->D:\AndroidWorkspace\Covid19_Tracker\app\src\main\AndroidManifest.xml:24:17-61
+35        </receiver>
+36
+37        <activity android:name="com.example.covid19tracker.Splashscreen" >
+37-->D:\AndroidWorkspace\Covid19_Tracker\app\src\main\AndroidManifest.xml:27:9-33:20
+37-->D:\AndroidWorkspace\Covid19_Tracker\app\src\main\AndroidManifest.xml:27:19-47
+38            <intent-filter>
+38-->D:\AndroidWorkspace\Covid19_Tracker\app\src\main\AndroidManifest.xml:28:13-32:29
+39                <action android:name="android.intent.action.MAIN" />
+39-->D:\AndroidWorkspace\Covid19_Tracker\app\src\main\AndroidManifest.xml:29:17-69
+39-->D:\AndroidWorkspace\Covid19_Tracker\app\src\main\AndroidManifest.xml:29:25-66
+40
+41                <category android:name="android.intent.category.LAUNCHER" />
+41-->D:\AndroidWorkspace\Covid19_Tracker\app\src\main\AndroidManifest.xml:31:17-77
+41-->D:\AndroidWorkspace\Covid19_Tracker\app\src\main\AndroidManifest.xml:31:27-74
+42            </intent-filter>
+43        </activity>
+44        <activity android:name="com.example.covid19tracker.MainActivity" >
+44-->D:\AndroidWorkspace\Covid19_Tracker\app\src\main\AndroidManifest.xml:34:9-43:20
+44-->D:\AndroidWorkspace\Covid19_Tracker\app\src\main\AndroidManifest.xml:34:19-47
+45
+46            <!--
+47            <intent-filter>
+48                <action android:name="android.intent.action.MAIN" />
+49
+50                <category android:name="android.intent.category.LAUNCHER" />
+51            </intent-filter>
+52            -->
+53        </activity>
+54
+55        <provider
+55-->[com.squareup.picasso:picasso:2.71828] D:\.gradle\caches\transforms-2\files-2.1\9a9098c926c15125e1b658e25467d054\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+56            android:name="com.squareup.picasso.PicassoProvider"
+56-->[com.squareup.picasso:picasso:2.71828] D:\.gradle\caches\transforms-2\files-2.1\9a9098c926c15125e1b658e25467d054\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+57            android:authorities="com.example.covid19tracker.com.squareup.picasso"
+57-->[com.squareup.picasso:picasso:2.71828] D:\.gradle\caches\transforms-2\files-2.1\9a9098c926c15125e1b658e25467d054\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+58            android:exported="false" />
+58-->[com.squareup.picasso:picasso:2.71828] D:\.gradle\caches\transforms-2\files-2.1\9a9098c926c15125e1b658e25467d054\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+59    </application>
+60
+61</manifest>

@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="10dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/product_sans"
+                android:text="About"
+                android:textSize="22.5sp" />
+
+            <ImageView
+                android:id="@+id/sharebtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/rippleeffect"
+                android:padding="5dp"
+                android:src="@drawable/share" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/realheroescard"
+        android:layout_width="match_parent"
+        android:layout_height="264dp"
+        android:layout_below="@+id/cv1"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="2dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/realhereoes" />
+    </androidx.cardview.widget.CardView>
+
+    <!--<androidx.cardview.widget.CardView
+        android:id="@+id/yash_profile_holder"
+        android:layout_below="@+id/app_desc_card"
+        app:cardElevation="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp">
+
+
+    </androidx.cardview.widget.CardView>&lt;!&ndash;yash profile&ndash;&gt;-->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/anuj_profile_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/realheroescard"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dev_desc_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/product_sans_bold"
+                android:text="Developers:"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/yashpicturelayout"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp">
+
+                <ImageView
+                    android:id="@+id/yash_img"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/yash_picture" />
+
+                <TextView
+                    android:id="@+id/dev1_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@+id/yash_img"
+                    android:fontFamily="@font/product_sans_bold"
+                    android:text="Yash Mutha"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toRightOf="@+id/yash_img"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/yinsta"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/rippleeffect"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:src="@drawable/instagram" />
+
+                    <ImageView
+                        android:id="@+id/yface"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/rippleeffect"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="2dp"
+                        android:src="@drawable/facebook" />
+
+                    <ImageView
+                        android:id="@+id/ytwit"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/rippleeffect"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:src="@drawable/twitter" />
+
+                    <ImageView
+                        android:id="@+id/ygit"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/rippleeffect"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:src="@drawable/github" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/anujpicturelayout"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp">
+
+                <ImageView
+                    android:id="@+id/anuj_img"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/anuj_picture" />
+
+                <TextView
+                    android:id="@+id/dev2_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@+id/anuj_img"
+                    android:fontFamily="@font/product_sans_bold"
+                    android:text="Anuj Mutha"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toRightOf="@+id/anuj_img"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/ainsta"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/rippleeffect"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:src="@drawable/instagram" />
+
+                    <ImageView
+                        android:id="@+id/aface"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/rippleeffect"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="2dp"
+                        android:src="@drawable/facebook" />
+
+                    <ImageView
+                        android:id="@+id/atwit"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/rippleeffect"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:src="@drawable/twitter" />
+
+                    <ImageView
+                        android:id="@+id/agit"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/rippleeffect"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:src="@drawable/github" />
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/app_desc_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/anuj_profile_holder"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="2dp">
+
+        <RelativeLayout
+            android:id="@+id/app_desc_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/appdesctxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/product_sans_bold"
+                android:text="Disclaimer:"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/app_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/appdesctxt"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/product_sans_regular"
+                android:padding="5dp"
+                android:text=""
+                android:textSize="15dp" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_desc_card"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rippleeffect"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/supportourworktxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/product_sans_bold"
+                android:text="Support Our Work:"
+                android:textSize="15sp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/paypalcardview"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/supportourworktxt"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="5dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:background="@drawable/l2" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rippleeffectforpaypal"
+                    android:padding="10dp"
+                    android:weightSum="10">
+
+                    <ImageView
+                        android:id="@+id/paypalimageview"
+                        android:layout_width="30dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="2"
+                        android:src="@drawable/paypal" />
+
+                    <TextView
+                        android:id="@+id/paypal_title"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="8"
+                        android:fontFamily="@font/product_sans_regular"
+                        android:gravity="center"
+                        android:text="Null"
+                        android:textSize="20dp"
+                        android:textStyle="bold|italic" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView><!--Paypal-->
+
+</RelativeLayout>

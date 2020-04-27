@@ -1,0 +1,247 @@
+<resources>
+    <string name="app_name">कोरोनावायरस ट्रैकर</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="TextView">Numbers</string>
+    <string name="GraphView">Analytics</string>
+    <string name="SafteyMeasures">Safety</string>
+    <string name="AboutView">About</string>
+    <string name="pref_locale">hi-IN</string>
+
+    <!--TextFragment Strings-->
+    <string name="TextFragmentCountryTitle">देश</string>
+    <string name="TextFragmentActiveTitle">सक्रिय मामले</string>
+    <string name="TextFragmentRecoveredTitle">ठीक हो गए</string>
+    <string name="TextFragmentDeadTitle">कुल मारे गए</string>
+    <string name="TextFragmentTotalTitle">कुल मामले</string>
+    <string name="TextFragmentTodayTitle">नए मामले</string>
+    <string name="TextFragmentDiedTodayTitle">आज मारे गए</string>
+    <string name="TextFragmentCriticalTitle">गंभीर हालत</string>
+
+    <!--AboutFragment Strings-->
+    <string name="AboutFragmentDev1Title">यश मुथा</string>
+    <string name="AboutFragmentDev2Title">अनुज मुथा</string>
+    <string name="AboutFragmentAppDescription">यह एप्लिकेशन हमारे द्वारा कोरोनोवायरस जानकारी से अपडेट होने के लिए विकसित की गई है</string>
+    <string name="AboutFragmentDevelopedByTitle">एप्लिकेशन के डेवलपर्स:</string>
+    <string name="AboutFragmentSocialMediaTitle">सोशल मीडिया लिंक</string>
+
+    <!--SafetyFragment Strings-->
+    <string name="SafetyFragmentTitle">सुरक्षा उपाय और सावधानियां</string>
+    <string name="SafetyFragmentMessage1">&quot; अपने हाथों को नियमित रूप से धोएं &quot;</string>
+    <string name="SafetyFragmentMessage2">&quot; अल्कोहॉल आधारित सैनिटाइजर के साथ अपने हाथों को साफ करें &quot;</string>
+    <string name="SafetyFragmentMessage3">&quot; सामाजिक दूरी बनाए रखें &quot;</string>
+    <string name="SafetyFragmentMessage4">&quot; नमस्ते को प्राथमिकता दें। हैंडशेक और गले लगाने से बचें &quot;</string>
+    <string name="SafetyFragmentMessage5">&quot; फेस मास्क का प्रयोग करें (अधिमानतः 3 स्तरित N95) &quot;</string>
+    <string name="SafetyFragmentMessage6">&quot; Try to work from home &quot;</string>
+    <string name="SafetyFragmentMessage7">" Consult your doctor upon identification of sympotms "</string>
+    <string name="AboutFragmentPaypalTitle"><![CDATA[
+        <font color=\"#253B80\">Pay</font><font color=\"#2997D8\"Pal</font>
+    ]]></string>
+
+    <string-array name="countries">
+        <item>भारत</item>
+        <item>दुनिया भर</item>
+        <item>अफ़ग़ानिस्तान</item>
+        <item> अल्बानिया </item>
+        <item> अल्जीरिया </item>
+        <item> अंगोला </item>
+        <item> एंगुइला </item>
+        <item> एंटीगुआ और बारबुडा </item>
+        <item> अर्जेंटीना </item>
+        <item> आर्मेनिया </item>
+        <item> अरूबा </item>
+        <item> ऑस्ट्रेलिया </item>
+        <item> ऑस्ट्रिया </item>
+        <item> अज़रबैजान </item>
+        <item> बहामा </item>
+        <item> बहरीन </item>
+        <item> बांग्लादेश </item>
+        <item> बारबाडोस </item>
+        <item> बेलारूस </item>
+        <item> बेल्जियम </item>
+        <item> बेलीज </item>
+        <item> बेनिन </item>
+        <item> बरमूडा </item>
+        <item> भूटान </item>
+        <item> बोलीविया </item>
+        <item> बोस्निया और हर्ज़ेगोविना </item>
+        <item> बोत्सवाना </item>
+        <item> ब्राजील </item>
+        <item> ब्रिटिश वर्जिन द्वीप समूह </item>
+        <item> ब्रुनेई </item>
+        <item> बुल्गारिया </item>
+        <item> बुर्किना फ़ासो </item>
+        <item> बुरुंडी </item>
+        <item> कंबोडिया </item>
+        <item> कैमरून </item>
+        <item> कनाडा </item>
+        <item> केमैन आइलैंड्स </item>
+        <item> चाड </item>
+        <item> चिली </item>
+        <item> चीन </item>
+        <item> कोलम्बिया </item>
+        <item> कोस्टा रिका </item>
+        <item> क्रोएशिया </item>
+        <item> क्यूबा </item>
+        <item> साइप्रस </item>
+        <item> डेनमार्क </item>
+        <item> जिबूती </item>
+        <item> डोमिनिका </item>
+        <item> डोमिनिकन गणराज्य </item>
+        <item> इक्वाडोर </item>
+        <item> मिस्र </item>
+        <item> अल साल्वाडोर </item>
+        <item> इक्वेटोरियल गिनी </item>
+        <item> इरिट्रिया </item>
+        <item> एस्टोनिया </item>
+        <item> इथियोपिया </item>
+        <item> फ़ॉकलैंड द्वीप </item>
+        <item> फिजी </item>
+        <item> फिनलैंड </item>
+        <item> फ्रांस </item>
+        <item> फ्रेंच पोलिनेशिया </item>
+        <item> गैबॉन </item>
+        <item> गाम्बिया </item>
+        <item> जॉर्जिया </item>
+        <item> जर्मनी </item>
+        <item> घाना </item>
+        <item> जिब्राल्टर </item>
+        <item> ग्रीस </item>
+        <item> ग्रीनलैंड </item>
+        <item> ग्रेनेडा </item>
+        <item> ग्वाटेमाला </item>
+        <item> गिनी </item>
+        <item> गिनी-बिसाऊ </item>
+        <item> गुयाना </item>
+        <item> हैती </item>
+        <item> होंडुरस </item>
+        <item> हांगकांग </item>
+        <item> हंगरी </item>
+        <item> आइसलैंड </item>
+        <item> इंडोनेशिया </item>
+        <item> ईरान </item>
+        <item> इराक </item>
+        <item> आयरलैंड </item>
+        <item> आइल ऑफ मैन </item>
+        <item> इज़राइल </item>
+        <item> इटली </item>
+        <item> आइवरी कोस्ट </item>
+        <item> जमैका </item>
+        <item> जापान </item>
+        <item> जर्सी </item>
+        <item> जॉर्डन </item>
+        <item> कज़ाकस्तान </item>
+        <item> केन्या </item>
+        <item> कुवैत </item>
+        <item> किर्गिज़स्तान </item>
+        <item> लाओस </item>
+        <item> लातविया </item>
+        <item> लेबनान </item>
+        <item> लाइबेरिया </item>
+        <item> लीबिया </item>
+        <item> लिकटेंस्टीन </item>
+        <item> लिथुआनिया </item>
+        <item> लक्समबर्ग </item>
+        <item> मकाओ </item>
+        <item> मेडागास्कर </item>
+        <item> मलावी </item>
+        <item> मलेशिया </item>
+        <item> मालदीव </item>
+        <item> माली </item>
+        <item> माल्टा </item>
+        <item> मॉरिटानिया </item>
+        <item> मॉरिशस </item>
+        <item> मैयट </item>
+        <item> मेक्सिको </item>
+        <item> माल्डोवा </item>
+        <item> मोनाको </item>
+        <item> मंगोलिया </item>
+        <item> मोंटेनेग्रो </item>
+        <item> मोंटेसेराट </item>
+        <item> मोरक्को </item>
+        <item> मोजाम्बिक </item>
+        <item> म्यांमार </item>
+        <item> नामीबिया </item>
+        <item> नेपाल </item>
+        <item> नीदरलैण्ड </item>
+        <item> न्यू कैलेडोनिया </item>
+        <item> न्यूजीलैंड </item>
+        <item> निकारागुआ </item>
+        <item> नाइजर </item>
+        <item> नाइजीरिया </item>
+        <item> नॉर्वे </item>
+        <item> ओमान </item>
+        <item> पाकिस्तान </item>
+        <item> पनामा </item>
+        <item> पापुआ न्यू गिनी </item>
+        <item> पैराग्वे </item>
+        <item> पेरू </item>
+        <item> फिलीपींस </item>
+        <item> पोलैंड </item>
+        <item> पुर्तगाल </item>
+        <item> कतर </item>
+        <item> रोमानिया </item>
+        <item> रूस </item>
+        <item> रवांडा </item>
+        <item> सेंट लूसिया </item>
+        <item> सेंट मार्टिन </item>
+        <item> सैन मैरिनो </item>
+        <item> साओ टोम और प्रिंसिप </item>
+        <item> सऊदी अरब </item>
+        <item> सेनेगल </item>
+        <item> सर्बिया </item>
+        <item> सेशेल्स </item>
+        <item> सिएरा लियोन </item>
+        <item> सिंगापुर </item>
+        <item> स्लोवाकिया </item>
+        <item> स्लोवेनिया </item>
+        <item> सोमालिया </item>
+        <item> दक्षिण अफ्रीका </item>
+        <item> स्पेन </item>
+        <item> श्रीलंका </item>
+        <item> सूडान </item>
+        <item> सूरीनाम </item>
+        <item> स्वीडन </item>
+        <item> स्विट्जरलैंड </item>
+        <item> सीरिया </item>
+        <item> ताइवान </item>
+        <item> तंजानिया </item>
+        <item> थाईलैंड </item>
+        <item> टोगो </item>
+        <item> त्रिनिदाद और टोबैगो </item>
+        <item> ट्यूनीशिया </item>
+        <item> तुर्की </item>
+        <item> युगांडा </item>
+        <item> यूक्रेन </item>
+        <item> संयुक्त राज्य अमेरिका </item>
+        <item> उज़्बेकिस्तान </item>
+        <item> वियतनाम </item>
+        <item> जिम्बाब्वे </item>
+    </string-array>
+
+    <string name="app_disclaimer"><![CDATA[
+	<br>This app is developed by <b>Yash Mutha</b> & <b>Anuj Mutha</b> as a hobby and is the result of our love for programming.
+	<br><br>Our Motivation while developing this app is our love for the Nation and it\'s People.
+	<br><br>The data and libraries used in this app belong to their original copyright holders.
+	<br><br>This app doesn\'t claim any copyright of the data used or displayed.
+	<br><br>The development of this app is purely intended for educational purposes only.
+	<br><br>Developers of this app don\'t endorse anyone to keep utter trust on the data.
+	<br><br>In case of any discrepancies\/suggestions\/comments, feel free to contact us.
+]]></string>
+
+    <string name="total_graph_title"><![CDATA[
+        <b>Total</b> <small><font color=\"#808080\">Cases</font></small>
+    ]]></string>
+
+    <string name="recovered_graph_title"><![CDATA[
+        <b>Recovered</b> <small><font color=\"#808080\">Cases</font></small>
+    ]]></string>
+
+    <string name="dead_graph_title"><![CDATA[
+        <b>Dead</b> <small><font color=\"#808080\">Cases</font></small>
+    ]]></string>
+
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+
+</resources>
